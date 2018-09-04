@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Match Maker</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+
+		<link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu:300" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<div class="main">
+			<h1>Match Maker</h1>
+			<p id="signature">By Peter Jaric</p>
+			<h2>Tables</h2>
+			<div>
+				<label for="count">Number of players per table:</label>
+				<input id="count" type="text" value="4" pattern="[0-9]+"/>
+			</div>
+			<h2>Players</h2>
+			<label for="names">Enter player names, separated by newlines:</label>
+			<div id="names" contenteditable>
+				<div>Maria Riversmith</div>
+				<div>José Ríoherrero</div>
+				<div>Amne Mto Mkufur</div>
+				<div>Aram Faram</div>
+				<div>Bente Bonte</div>
+				<div>Tjosan Hoppsan</div>
+				<div>Silly Sally</div>
+			</div>
+			<button id="generate">Randomize tables</button>
+			<ol id="results"/>
+			<p class="footer">
+				<span class="symbol">🎲</span>
+			</p>
+		</div>
+		<script src="match-maker.js"></script>
+
+	</body>
+
+</html>

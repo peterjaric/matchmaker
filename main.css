@@ -1,0 +1,106 @@
+* {
+		box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		background-color: #99d6ff; 
+}
+
+h1, h2 {
+    font-family: 'Pacifico', serif;
+}
+
+h1 {
+		font-size: 4em;
+		margin: 10px auto 10px auto;
+}
+
+h2 {
+		margin-bottom: -0;
+}
+
+#signature {
+		font-size: 0.8em;
+		margin: -2em auto 0 auto;
+}
+
+#generate {
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px;
+		font-size: 1.3em;
+		font-weight: bold;
+		border: none;
+		background-color: #5cafe6;
+}
+
+
+
+.main {
+		display: flex;
+		flex-direction: column;
+		max-width: 800px;
+		width: 100%;
+		align-items: stretch;
+}
+
+#count {
+		width: 20px;
+		text-align: center;
+}
+
+#names, ol {
+		padding: 5px;
+		width: 97%;
+		margin-right: auto;
+		background-color: #ffffff;
+}
+
+label {
+		margin-bottom: 5px;
+}
+
+#results {
+		display: none;
+}
+
+.footer {
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+}
+
+.footer .symbol {
+		display: block;
+		font-size: 3em;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+ol {
+		list-style-type: none;
+		counter-reset: tableCounter;
+}
+
+li:before {
+  content: "Table " counter(tableCounter) ": ";
+  counter-increment: tableCounter;
+	font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+li {
+		font-size: 1.2em;
+		line-height: 1.5em;
+		position: relative;
+		padding-left: 4.5em;
+}
+
