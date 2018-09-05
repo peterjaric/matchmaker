@@ -7,9 +7,9 @@ function shuffleArray(array) {
     }
 }
 
-let nameList = document.querySelector('#names');
-let generate = document.querySelector('#generate');
-let countInput = document.querySelector('#count');
+let nameList = document.querySelector('.names');
+let generate = document.querySelector('.generate');
+let countInput = document.querySelector('.count');
 
 // Disable/enable generate button when the count value changes
 countInput.onkeyup = e => {
@@ -24,10 +24,10 @@ generate.onclick = e => {
 		return;
 	}
 
-	let results = document.querySelector('#results');
+	let results = document.querySelector('.results');
 	let count = countInput.value;
 	let tables = [];
-	let names =  Array.from(document.querySelectorAll('#names div')).map(div => div.textContent.trim());
+	let names =  document.querySelector('.names').innerText.trim().split('\n').map(name => name.trim());
 	shuffleArray(names);
 
 	let tableCount = Math.ceil(names.length / count);
@@ -44,5 +44,5 @@ generate.onclick = e => {
 	results.innerHTML = tables.map(arr => "<li>" + arr.join("<br>") + "</li>").join(" ");
 
 	// Show list of tables
-	document.querySelector('#results').style.display = 'block';
+	document.querySelector('.results').style.display = 'block';
 };

@@ -13,15 +13,9 @@
 	<body>
 		<div class="main">
 			<h1>Match Maker</h1>
-			<p id="signature">By Peter Jaric</p>
-			<h2>Tables</h2>
-			<div>
-				<label for="count">Number of players per table:</label>
-				<input id="count" type="text" value="4" pattern="[0-9]+"/>
-			</div>
 			<h2>Players</h2>
 			<label for="names">Enter player names, separated by newlines:</label>
-			<div id="names" contenteditable>
+			<div class="names" contenteditable>
 				<div>Maria Riversmith</div>
 				<div>José Ríoherrero</div>
 				<div>Amne Mto Mkufur</div>
@@ -30,12 +24,17 @@
 				<div>Tjosan Hoppsan</div>
 				<div>Silly Sally</div>
 			</div>
-			<button id="generate">Randomize tables</button>
-			<ol id="results"/>
-			<p class="footer">
-				<span class="symbol">🎲</span>
-			</p>
+			<div class="tables-header">
+				<h2>Tables</h2>
+				<button title="Randomize" class="generate">Randomize 🎲</button>
+			</div>
+			<div>
+				<label for="count">Number of players per table:</label>
+				<input class="count" type="text" value="4" pattern="[0-9]+"/>
+			</div>
+			<ol class="results"></ol>
 		</div>
+		<p class="signature">(Made by <a href="https://jaric.org">Peter Jaric</a> in 2018)</p>
 		<script src="match-maker.js"></script>
 	</body>
 </html>
